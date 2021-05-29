@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Game from "./components/Game";
+
+const cssstyle={
+  display:"flex",
+  alignItems:"center",
+  padding:"250px",
+  backgroundColor:"yellow",
+  justifyContent:"center",
 }
-
+class App extends Component {
+  render() {
+    return (
+      <React.Fragment>
+        <div style={cssstyle}>
+        <Game />
+        </div>
+      </React.Fragment>
+    );
+  }
+}
 export default App;
